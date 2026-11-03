@@ -1,0 +1,6 @@
+import Link from "next/link";
+import { Aperture } from "lucide-react";
+
+export default function AboutPage() {
+  return <><section className="page-hero"><div className="wrap"><p className="eyebrow">A LITTLE MORE ROOM TO MAKE</p><h1>Good ideas need<br /><em>good rooms.</em></h1><p>StudioSpace connects independent creators with the spaces that help them make their best work.</p></div></section><section className="section wrap"><div className="process-section"><div className="process-title"><Aperture size={40} color="#96b45c" /><h2>For the people<br />who <em>make things.</em></h2></div><div><p className="detail-copy" style={{ marginTop: 0 }}>We think the best ideas happen when the right people get together in the right place. But finding a studio, comparing rates, and coordinating the details can make a simple creative day feel complicated.</p><p className="detail-copy">StudioSpace makes it easier to discover creative workspaces—from photo studios and sound stages to podcast rooms, music suites, and art workshops. Studio owners can share their spaces; creators can find a room that fits their next project.</p><Link className="button button-dark" href="/studios">Explore studios ↗</Link></div></div></section></>;
+}
