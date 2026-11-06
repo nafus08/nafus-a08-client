@@ -23,7 +23,7 @@ StudioSpace is a creative-space marketplace for independent filmmakers, photogra
 
 ## Deployment
 
-Deploy `server` as a Node service and `client` as a Next.js app. Configure the environment variables from each `.env.example` in the hosting dashboards. Set `CLIENT_URL` to the exact deployed website origin, `BETTER_AUTH_URL` to the API's public URL, and register the Google callback at `<BETTER_AUTH_URL>/api/auth/callback/google`. Use HTTPS for production so the secure, cross-site HTTP-only cookie is sent by the browser. Ensure the host supports Next.js route fallback/reloads.
+Deploy `server` as a Node service and `client` as a Next.js app. The Vercel rewrite in `vercel.json` proxies `/api/*` requests to the API so authentication cookies remain same-origin in the browser. Set the client's `NEXT_PUBLIC_API_URL` to the deployed website origin (for example, `https://your-site.vercel.app`). Set the server's `CLIENT_URL` to that exact origin and `BETTER_AUTH_URL` to the API's public URL. Register the Google callback at `<BETTER_AUTH_URL>/api/auth/callback/google`. Ensure the API host supports Next.js route fallback/reloads.
 
 Live site: add the deployed URL after hosting.
 
